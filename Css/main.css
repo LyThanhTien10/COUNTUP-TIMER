@@ -1,0 +1,71 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../Font/Poppins.otf); }
+
+:root {
+  --my-yellow: rgb(251, 255, 0);
+  --my-black: rgb(10, 10, 10); }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins'; }
+  *::selection {
+    background-color: var(--my-black); }
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../Image/Background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .container .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .container .content #header {
+      font-size: 80px;
+      color: var(--my-yellow); }
+    .container .content .time {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px; }
+      .container .content .time .wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 200px; }
+        .container .content .time .wrap p {
+          font-size: 40px;
+          font-weight: 200;
+          color: var(--my-yellow); }
+        .container .content .time .wrap #day, .container .content .time .wrap #hour, .container .content .time .wrap #minute, .container .content .time .wrap #second {
+          font-weight: bold; }
+    .container .content #pause {
+      margin-top: 50px;
+      padding: 10px 20px;
+      font-size: 20px;
+      color: var(--my-yellow);
+      background-color: var(--my-black);
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer; }
+      .container .content #pause:hover {
+        background-color: var(--my-yellow);
+        color: var(--my-black);
+        box-shadow: -2px -2px 6px var(--my-yellow);
+        transform: translate(2px, 3px);
+        transition: 0.3s ease-in-out; }
+        .container .content #pause:hover:active {
+          transform: translate(1px, 1px); }
