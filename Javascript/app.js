@@ -3,7 +3,13 @@ var showhour = document.querySelector('#hour');
 var showminute = document.querySelector('#minute');
 var showsecond = document.querySelector('#second');
 var pause_btn = document.querySelector('#pause');
+var loading = document.querySelector('.loading');
 
+window.onload = ()=>{
+    setTimeout(()=>{
+        loading.style.display = 'none';
+    },1000);
+}
 
 var OldDay = new Date("July 10, 2019 13:00:00").getTime();
 
