@@ -16,11 +16,15 @@ var x = setInterval(()=>{
     showday.innerHTML = day;
 
     var hour = Math.floor((distance%(24*60*60*1000))/(60*60*1000));
-    showhour.innerHTML = hour;
+    Show(hour, showhour);
 
     var minute = Math.floor((distance%(60*60*1000))/(60*1000));
-    showminute.innerHTML = minute;
+    Show(minute, showminute);
 
     var second = Math.floor((distance%(60*1000))/(1000));
-    showsecond.innerHTML = second;
+    Show(second, showsecond);
 },1000);
+
+function Show(value ,text){
+    value <= 9 ? text.innerHTML = '0' + value : text.innerHTML = value;
+}
