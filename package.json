@@ -1,0 +1,14 @@
+{
+  "name": "countup-timer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scsstocss": "node-sass Sass/main.scss Css/main.css -w"
+  },
+  "author": "Ly Thanh Tien",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
